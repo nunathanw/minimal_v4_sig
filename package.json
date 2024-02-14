@@ -1,0 +1,14 @@
+{
+  "name": "rn_aws",
+  "version": "1.0.0",
+  "description": "minimal package for signing and sending requests to aws without aws sdk",
+  "main": "aws.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
