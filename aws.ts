@@ -18,7 +18,6 @@ const credentialsGetSigningKey = async (credentials, region, date, service) => {
     credentials.accessKeyId,
     credentials.secretKey
   );
-  // const cacheKey = `${date}:${region}:${service}:${credsHash}:${credentials.sessionToken}`;
   let key = `AWS4${credentials.secretKey}`;
   for (const i of [date, region, service, "aws4_request"]) {
     key = await hmacSHA256(i, key);
@@ -34,7 +33,6 @@ const getSigningKey = async (credentials, region, date, service) => {
 };
 
 const getCanonicalQuery = async (query) => {
-  // export const getCanonicalQuery = async (query) => {
   //
   const sortedQuery = Object.keys(query).sort();
   const canonicalQuery = sortedQuery
